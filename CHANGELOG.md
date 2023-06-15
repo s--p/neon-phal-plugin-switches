@@ -1,13 +1,17 @@
 # Changelog
 
-## [0.0.4a1](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/tree/0.0.4a1) (2023-06-14)
+## [0.0.5a1](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/tree/0.0.5a1) (2023-06-15)
 
-[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/compare/0.0.3...0.0.4a1)
+[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/compare/0.0.4...0.0.5a1)
+
+**Implemented enhancements:**
+
+- \[FEAT\] Update automation [\#12](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/issues/12)
 
 **Merged pull requests:**
 
-- Update GH Automation to latest best practice [\#10](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/pull/10) ([NeonDaniel](https://github.com/NeonDaniel))
-- Update bus dependency [\#8](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/pull/8) ([NeonDaniel](https://github.com/NeonDaniel))
+- Update GH Automation to default branch [\#14](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/pull/14) ([NeonDaniel](https://github.com/NeonDaniel))
+- Update Automation to test non-inherited secrets [\#13](https://github.com/NeonGeckoCom/neon-phal-plugin-switches/pull/13) ([NeonDaniel](https://github.com/NeonDaniel))
 
 
 
