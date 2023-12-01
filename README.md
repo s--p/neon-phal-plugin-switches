@@ -1,5 +1,5 @@
 # PHAL Switches Plugin
-Enables switch inputs for volume, mute, and action button. Current implementation
+Enables ReSpeaker 2Mic Hat action button to trigger listening. Current implementation
 assumes switches match the SJ201 configuration of pull-up momentary switches (GND activated)
 and a mute toggle where GND == unmuted.
 
@@ -8,5 +8,5 @@ and a mute toggle where GND == unmuted.
 |-----|---------------|
 | 22  | Volume Up     |
 | 23  | Volume Down   |
-| 24  | Action Button |
+| 17  | Action Button |
 | 25  | Mute Switch   |
