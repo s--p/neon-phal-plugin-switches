@@ -34,22 +34,11 @@ from ovos_plugin_manager.phal import PHALPlugin
 from ovos_plugin_manager.hardware.switches import AbstractSwitches
 from ovos_utils.log import LOG
 from ovos_bus_client.message import Message
-from sj201_interface.revisions import detect_sj201_revision
-
-
-class SwitchValidator:
-    @staticmethod
-    def validate(_=None):
-        # TODO: More generic validation
-        return detect_sj201_revision() is not None
 
 
 class SwitchInputs(PHALPlugin):
-    validator = SwitchValidator
-
     def __init__(self, bus=None, config=None):
-        super().__init__(bus=bus, name="neon-phal-plugin-switches",
-                         config=config)
+        super().__init__(bus=bus, name="neon-phal-plugin-switches", config=config)
         # TODO: Read pins from configuration
         self.switches = GPIOSwitches(action_callback=self.on_button_press,
                                      volup_callback=self.on_button_volup_press,
