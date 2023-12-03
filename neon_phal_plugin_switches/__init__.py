@@ -8,7 +8,6 @@ class SwitchInputs(PHALPlugin):
     def __init__(self, bus=None, config=None):
         super().__init__(bus=bus, name="neon-phal-plugin-switches", config=config)
         self.switches = GPIOSwitches(action_callback=self.on_button_press)
-        self.switches.on_action = self.on_button_press
 
     def on_button_press(self):
         LOG.info("Listen button pressed")
@@ -25,15 +24,15 @@ class GPIOSwitches(AbstractSwitches):
         GPIO.setwarnings(False)
         GPIO.setup(self.action_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
         GPIO.add_event_detect(self.action_pin,
-                              GPIO.FALLING,
+                              GPIO.BOTH,
                               callback=self.handle_action,
                               bouncetime=debounce)
 
     def handle_action(self, _):
-        self.on_action()
+        if GPIO.input(self.action_pin) == GPIO.HIGH:
+            self.on_action()
 
-    @property
-    def capabilities(self) -> dict:
+    def capabilities(self):
         return {}
 
     def shutdown(self):
